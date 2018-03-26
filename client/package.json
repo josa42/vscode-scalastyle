@@ -1,0 +1,35 @@
+{
+	"name": "scalastyle",
+	"description": "",
+	"author": "Josa Gesell",
+	"license": "MIT",
+	"version": "0.0.1",
+	"preview": true,
+	"publisher": "josa",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/josa42/vscode-scalastyle"
+	},
+	"engines": {
+		"vscode": "^1.16.0"
+	},
+	"categories": [
+		"Linter"
+	],
+	"activationEvents": [
+		"onLanguage:scala"
+	],
+	"main": "./out/src/extension",
+	"contributes": {},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -p ./",
+		"watch": "tsc -w -p ./",
+		"update-vscode": "node ./node_modules/vscode/bin/install",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"vscode": "^1.1.5",
+		"vscode-languageclient": "^3.5.0"
+	}
+}
