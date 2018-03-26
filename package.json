@@ -1,25 +1,37 @@
 {
-	"name": "scalastyle",
-	"description": "",
-	"author": "Josa Gesell",
-	"license": "MIT",
-	"version": "0.0.1",
-	"publisher": "josa",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/josa42/vscode-scalastyle"
-	},
-	"scripts": {
-		"postinstall": "cd server && npm install && cd ../client && npm install && cd ..",
-		"compile": "tsc -p client/tsconfig.json && cd server && npm run installServer && cd .. && tsc -p server/tsconfig.json",
-		"compile:client": "tsc -p client/tsconfig.json",
-		"watch:client": "tsc -w -p client/tsconfig.json",
-		"compile:server": "cd server && npm run installServer && cd .. && tsc -p server/tsconfig.json",
-		"watch:server": "cd server && npm run installServer && cd .. && tsc -w -p server/tsconfig.json"
-	},
-	"devDependencies": {
-		"@types/mocha": "^2.2.48",
-		"@types/node": "^6.0.101",
-		"typescript": "^2.7.2"
-	}
+  "name": "scalastyle",
+  "description": "",
+  "author": "Josa Gesell",
+  "license": "MIT",
+  "version": "0.0.0",
+  "preview": true,
+  "publisher": "josa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josa42/vscode-scalastyle"
+  },
+  "engines": {
+    "vscode": "^1.16.0"
+  },
+  "categories": [
+    "Linters"
+  ],
+  "activationEvents": [
+    "onLanguage:scala"
+  ],
+  "main": "src/extension.js",
+  "contributes": {},
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "dependencies": {
+    "temp-write": "^3.4.0",
+    "vscode-languageclient": "^4.0.0",
+    "vscode-languageserver": "^4.0.0",
+    "vscode": "^1.1.5"
+  },
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  }
 }
