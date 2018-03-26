@@ -11,7 +11,7 @@
     "url": "https://github.com/josa42/vscode-scalastyle"
   },
   "engines": {
-    "vscode": "^1.16.0"
+    "vscode": "^1.20.0"
   },
   "categories": [
     "Linters"
@@ -27,11 +27,8 @@
   },
   "dependencies": {
     "temp-write": "^3.4.0",
+    "vscode": "^1.1.14",
     "vscode-languageclient": "^4.0.0",
-    "vscode-languageserver": "^4.0.0",
-    "vscode": "^1.1.5"
-  },
-  "devDependencies": {
-    "typescript": "^2.7.2"
+    "vscode-languageserver": "^4.0.0"
   }
 }
